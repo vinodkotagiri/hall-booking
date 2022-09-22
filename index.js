@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const path = require('path')
 const dotenv = require('dotenv')
 dotenv.config()
 
@@ -9,9 +10,11 @@ app.use(express.json())
 const port = 8000
 
 //Home route
-app.get('/', () => (req, res) => {
-	res.status(200).json({ message: 'Welcome to booking app' })
-})
+
+const getHome = (req, res) => {
+	res.status(200).sendFile(path.join(__dirname, '/index.html'))
+}
+app.use('/', getHome)
 
 //Room routes
 const roomRoutes = require('./routes/room')

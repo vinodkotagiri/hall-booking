@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1 >Hall booking</h1>
+		<h3>Use given end points for different operations</h3>
+
+		<h4>
+			1) [POST]create a new Room:
+			<span style="color: green">/rooms/create</span>
+		</h4>
+		<p>
+			<em>Data to post:</em>
+            
+            <ul>
+                <li>
+                    seats(String)
+                </li>
+                <li>amenities(Array of
+                    Strings)</li>
+                    <li>pricePerHour(String)</li>
+            </ul>
+            
+            
+		</p>
+		<h4>2) [GET] Get rooms: <span style="color: green">/rooms</span></h4>
+		<h4>
+			3) [POST] Book a room: <span style="color: green">/bookings/book</span>
+		</h4>
+		<p>
+			<em>Data to post: </em
+			>
+            <ul>
+                <li>customerName(String)</li>
+                <li>Date(String)</li>
+                <li>startTime(String)</li>
+                <li>endTime(String)</li>
+                <li>roomID(_id)</li>
+            </ul>
+            
+		</p>
+
+		<h4>4) [GET] Get bookings:<span style="color: green"> /bookings</span></h4>
+	</body>
+</html>
